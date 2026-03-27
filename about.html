@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      background: #f1f6ff;
+    }
+
+    /* Hero section */
+    .about-hero {
+      background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("images/travel-journey.jpg") center/cover no-repeat;
+      color: white;
+      padding: 90px 20px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 255, 255, .25), transparent 60%);
+      top: -80px;
+      right: -80px;
+    }
+
+    .about-card,
+    .fun-box,
+    .how-box,
+    .closing-card {
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fun-box {
+      transition: 0.3s ease;
+    }
+
+    .fun-box:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
+    }
+
+    .section-soft-blue {
+      background: linear-gradient(135deg, #eaf2ff, #ffffff);
+      padding: 70px 0;
+    }
+
+    .section-soft-yellow {
+      background: linear-gradient(135deg, #fff6df, #ffffff);
+      padding: 70px 0;
+    }
+
+    .section-soft-green {
+      background: linear-gradient(135deg, #e9fff4, #ffffff);
+      padding: 70px 0;
+    }
+
+    .section-title {
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 70px;
+      height: 4px;
+      background: #0d6efd;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 10px;
+    }
+
+    @keyframes floaty {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* colorful glow overlay */
+    .fun-box::before,
+    .about-card::before,
+    .how-box::before,
+    .closing-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(120deg, #4facfe, #43e97b, #fa709a);
+      opacity: .08;
+      z-index: 0;
+    }
+
+    .fun-box>*,
+    .about-card>*,
+    .how-box>*,
+    .closing-card>* {
+      position: relative;
+      z-index: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div style="height:70px;"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-camera-fill"></i>
+        Travel<span>Journal</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="section-soft-blue">
+    <div class="container">
+      <div class="about-hero text-center">
+        <h1 class="fw-bold display-5">My Travel Journal</h1>
+        <p class="mt-2 mb-0">
+          Share your journeys, photos and stories with travellers around the world ✈️🌍📸
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT MAIN -->
+  <div class="container my-5">
+    <div class="row align-items-center about-card p-4">
+
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <img src="images/about.png" class="img-fluid rounded-circle mb-3" width="180" alt="about">
+        <h5 class="mb-0">Travel Lover</h5>
+        <small class="text-muted">Photography & storytelling</small>
+      </div>
+
+      <div class="col-md-8">
+        <h3 class="mb-3">About This Journal</h3>
+
+        <p>
+          I am a travel lover and photography enthusiast who created this
+          platform to collect and share travel memories and stories.
+        </p>
+
+        <p>
+          This journal is not only about my journeys — it is a space where
+          everyone can share their own travel experiences, moments and photos.
+        </p>
+
+        <p class="mb-0">
+          Together, we build a growing collection of stories, cultures and
+          beautiful memories from around the world.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHY I LOVE TRAVELLING -->
+  <div class="container my-5">
+    <h4 class="text-center mb-4 section-title">Why I Love Travelling</h4>
+
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="p-4 fun-box h-100">
+          <i class="bi bi-camera fs-1 text-primary"></i>
+          <h6 class="mt-3">Photography</h6>
+          <p class="small text-muted mb-0">
+            Capturing real moments and beautiful views
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 fun-box h-100">
+          <i class="bi bi-geo-alt fs-1 text-success"></i>
+          <h6 class="mt-3">Exploring Places</h6>
+          <p class="small text-muted mb-0">
+            Discovering new cities and hidden spots
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 fun-box h-100">
+          <i class="bi bi-journal-text fs-1 text-warning"></i>
+          <h6 class="mt-3">Story Writing</h6>
+          <p class="small text-muted mb-0">
+            Sharing memories through the journal
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHAT YOU CAN DO -->
+  <div class="section-soft-yellow">
+    <div class="container">
+
+      <h4 class="text-center mb-4 section-title">What You Can Do Here</h4>
+
+      <div class="row g-4 text-center">
+
+        <div class="col-md-4">
+          <div class="p-4 fun-box h-100">
+            <i class="bi bi-pencil-square fs-1 text-primary"></i>
+            <h6 class="mt-3">Write Experiences</h6>
+            <p class="small text-muted mb-0">
+              Share your travel stories and memories
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 fun-box h-100">
+            <i class="bi bi-image fs-1 text-success"></i>
+            <h6 class="mt-3">Upload Photos</h6>
+            <p class="small text-muted mb-0">
+              Add your favourite travel photos
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 fun-box h-100">
+            <i class="bi bi-people fs-1 text-warning"></i>
+            <h6 class="mt-3">Explore Others</h6>
+            <p class="small text-muted mb-0">
+              Read stories shared by other travellers
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-soft-green">
+    <div class="container">
+
+      <h4 class="text-center mb-4 section-title">How This Journal Works</h4>
+
+      <div class="row g-4">
+
+        <div class="col-md-3 text-center">
+          <div class="p-3 how-box h-100">
+            <h5>1️⃣</h5>
+            <p class="mb-0 small">Write your experience</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="p-3 how-box h-100">
+            <h5>2️⃣</h5>
+            <p class="mb-0 small">Upload your photos</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="p-3 how-box h-100">
+            <h5>3️⃣</h5>
+            <p class="mb-0 small">Share with everyone</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="p-3 how-box h-100">
+            <h5>4️⃣</h5>
+            <p class="mb-0 small">Explore other journeys</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FINAL CARD -->
+  <div class="section-soft-blue">
+    <div class="container">
+
+      <div class="card border-0 p-4 text-center closing-card">
+
+        <h5 class="mb-2">Start Sharing Your Journey</h5>
+
+        <p class="text-muted mb-3">
+          Your story can inspire someone else to travel.
+        </p>
+
+        <div>
+          <span class="badge bg-primary">Stories</span>
+          <span class="badge bg-success">Photos</span>
+          <span class="badge bg-warning text-dark">Memories</span>
+          <span class="badge bg-info text-dark">Community</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white mt-5">
+    <div class="container py-4 text-center">
+      <p class="mb-0">© 2026 Travel Journal. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.hero{
+    background: url("../images/long-drive.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-overlay{
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.gallery-img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-img:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+.gallery-img img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(20%);
+}
+
+.gallery-img:hover img{
+    filter: grayscale(0%);
+}
+
+.gallery-caption{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-img:hover .gallery-caption{
+    opacity: 1;
+}
+
+.gallery-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+
+.gallery-section{
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    border-radius: 18px;
+    padding: 40px 25px;
+}
+
+.gallery-title{
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.gallery-title::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: #6366f1;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:20px 0;
+}
+/* Creative Navbar */
+
+.glass-nav {
+    background: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.navbar-brand span {
+    color: #ffc107;
+}
+
+.nav-link {
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffc107;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #ffc107 !important;
+}
+
+.carousel-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-card{
+  border-radius: 16px;
+}
+
+.social-icons i{
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-icons i:hover{
+  transform: scale(1.2);
+}
+
+/* Creative background for contact page */
+.contact-hero{
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../images/contact-bg.jpg") center/cover no-repeat;
+  padding:60px 0;
+}
+
+
+/* Make headings readable on image */
+.contact-hero h3,
+.contact-hero h5,
+.contact-hero p{
+  color: #fff;
+}
+
+/* Cards still white and clean */
+.contact-card{
+  border-radius:18px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  background-color: #ffffff;
+}
+
+
+.info-card{
+    background: linear-gradient(135deg, #ffffff, #f7f9ff);
+}
+
+.social-link{
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover{
+    color: #0d6efd;
+    transform: translateY(-3px) scale(1.1);
+}
+
+.css-slider{
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides{
+  display: flex;
+  animation: slideLoop 12s linear infinite;
+}
+
+.slides img{
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+}
+
+@keyframes slideLoop{
+
+  /* slide 1 */
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+
+  /* move to slide 2 */
+  30%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-100%); }
+
+  /* move to slide 3 */
+  60%  { transform: translateX(-200%); }
+  80%  { transform: translateX(-200%); }
+
+  /* move to cloned slide 1 */
+  100% { transform: translateX(-300%); }
+}
+
+.travel-side-box {
+    background-color: #92918e;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.journal-timeline{
+    position: relative;
+}
+
+.journal-item{
+  position: relative;
+}
+
+.journal-item::before{
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #ffc107;
+  border-radius: 50%;
+  position: absolute;
+  left: -32px;
+  top: 22px;
+}
+
+.journal-feature img{
+  min-height: 230px;
+}
+
+.journal-img{
+  object-fit: cover;
+  min-height: 140px;
+  height: 240px;
+}
+
+.journal-bg{
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.6),
+            rgba(255,255,255,0.6)
+        ),
+        url("../images/journal-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    padding: 40px 20px;
+}
+
+.upload-card{
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+
+    /* ↓ lighter overlay so image is more visible */
+    background:
+      linear-gradient(rgba(222, 228, 236, 0.6), rgba(238,244,255,0.60)),
+      url("../images/gallery-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform .3s ease;
+
+    /* ↓ make the card taller */
+    min-height: 360px;
+
+    /* ↓ give more breathing space */
+    padding: 35px;
+}
+
+
+.upload-card:hover{
+    transform: translateY(-4px);
+}
+
+.upload-header h5{
+    font-weight: 600;
+}
+
+.upload-header small{
+    color: #6c757d;
+}
+
+.upload-box{
+    border: 2px dashed #b6c7ff;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.upload-box input{
+    cursor: pointer;
+}
